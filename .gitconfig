@@ -1,5 +1,5 @@
 [core]
-    excludesfile = /Users/ken/.gitignore.global
+    excludesfile = ~/.gitignore.global
 [color]
     ui = true
 [alias]
