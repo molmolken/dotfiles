@@ -1,0 +1,11 @@
+[core]
+    excludesfile = /Users/ken/.gitignore.global
+[color]
+    ui = true
+[alias]
+    st = status
+    cm = commit -m
+    br = branch
+    co = checkout
+    df = diff
+
