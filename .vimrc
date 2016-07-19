@@ -25,3 +25,10 @@ set display=uhex      "" 印字不可能文字を16進数で表示
 
 set wildmenu
 
+"デフォルトStatusLineのBold表示をやめる
+hi StatusLine cterm=reverse
+"InsertMode時のStatusLineカラーを変更
+au InsertEnter * hi StatusLine guifg=DarkBlue guibg=DarkYellow gui=none ctermfg=Blue ctermbg=Yellow cterm=none
+"NormalMode時のStatusLineカラーを変更
+au InsertLeave * hi StatusLine guifg=DarkBlue guibg=DarkGray gui=none ctermfg=Black ctermbg=White cterm=none
+
