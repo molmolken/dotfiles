@@ -1,11 +1,18 @@
 [core]
+    autocrlf = input
     excludesfile = ~/.gitignore.global
+    pager = less -r
 [color]
-    ui = true
+    ui = auto
+    diff = auto
+    interactive = auto
+    status = auto
 [alias]
     st = status
-    cm = commit -m
     br = branch
     co = checkout
+    graph = log --graph --oneline --decorate
+    cm = commit -m
+    and = add -n
     df = diff
 
