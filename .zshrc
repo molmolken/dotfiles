@@ -4,8 +4,10 @@
 #PATHの設定
 ########################################################
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
+export PATH=/usr/local/bin:/usr/local/go/bin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache #pipのダウンロードキャッシュ
+export GOPATH=$HOME/go
 
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -56,7 +58,7 @@ RPROMPT="[%m:%~]"
 #二行以上のコマンド用
 PROMPT2="%_%% "  
 #間違った時のプロンプト
-SPROMPT="%rのことですの？ [n,y,a,e]: " 
+SPROMPT="%rのことですの？ [n,y,a,e]: "
 
 #terminalに表示されるラベル
 case "${TERM}" in
@@ -113,10 +115,14 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31
 #########################################################
 alias ls="ls -CGF"
 alias la="ls -A"
+alias ll="ls -al"
 alias screen="screen -s zsh"	#screen起動時に$SHELLでなくzshを開く
 alias -s py=python
 alias g="git"
 alias gs="git status"
+alias gitop="git rev-parse --show-toplevel"
+alias gap="git add -p"
+alias gdfc="git diff --cached"
 alias pyrar="/Users/ken/python/py_tools/test.py"
 alias pytool="/Users/ken/python/py_tools/py_rename.py"
 
