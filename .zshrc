@@ -120,11 +120,12 @@ alias screen="screen -s zsh"	#screen起動時に$SHELLでなくzshを開く
 alias -s py=python
 alias g="git"
 alias gs="git status"
+alias gl="git log"
 alias gitop="git rev-parse --show-toplevel"
 alias gap="git add -p"
 alias gdfc="git diff --cached"
-alias pyrar="/Users/ken/python/py_tools/test.py"
-alias pytool="/Users/ken/python/py_tools/py_rename.py"
+alias pyrar="~/python/py_tools/test.py"
+alias pytool="~/python/py_tools/py_rename.py"
 
 function chpwd() { ls -FGC } #cdした後に自動でls
 
