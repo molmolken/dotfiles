@@ -4,7 +4,9 @@
 #PATHの設定
 ########################################################
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
-export PATH=/usr/local/bin:/usr/local/go/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
+#/usr/local/bin を優先して読むために先頭に追加
+export PATH=/usr/local/bin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache #pipのダウンロードキャッシュ
 export GOPATH=$HOME/go
