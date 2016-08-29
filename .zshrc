@@ -11,7 +11,8 @@ export MANPATH=/opt/local/man:$MANPATH
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache #pipのダウンロードキャッシュ
 export GOPATH=$HOME/go
 
-source /usr/local/bin/virtualenvwrapper.sh
+#見つからないのでコメントアウト
+#source /usr/local/bin/virtualenvwrapper.sh
 
 #########################################################
 #補完の設定
@@ -87,13 +88,15 @@ bindkey '^S' history-incremental-pattern-search-forward
 #########################################################
 #その他もろもろ
 ########################################################
-setopt auto_cd     #おーとcd ディレクトリ名だけで移動可能
-setopt auto_pushd  #cd -[tab]で移動履歴を参照
-setopt correct     #コマンド自動修正
-setopt nolistbeep  #ビープを消す   
-bindkey -e         #emacs風kyeバインド
-setopt list_packed #補完候補を詰めて表示
-setopt nolistbeep  #beepを消す
+setopt auto_cd      #おーとcd ディレクトリ名だけで移動可能
+setopt auto_pushd   #cd -[tab]で移動履歴を参照
+#setopt auto_menu    #タブキーで補完候補を順に表示
+setopt list_types   #補完候補一覧でファイルの種別を識別マーク表示
+setopt correct      #コマンド自動修正
+setopt nolistbeep   #ビープを消す   
+bindkey -e          #emacs風kyeバインド
+setopt list_packed  #補完候補を詰めて表示
+setopt nolistbeep   #beepを消す
 
 
 ##########################################################
