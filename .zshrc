@@ -94,7 +94,7 @@ setopt auto_pushd   #cd -[tab]で移動履歴を参照
 setopt list_types   #補完候補一覧でファイルの種別を識別マーク表示
 setopt correct      #コマンド自動修正
 setopt nolistbeep   #ビープを消す   
-bindkey -e          #emacs風kyeバインド
+bindkey -e          #emacs風keyバインド
 setopt list_packed  #補完候補を詰めて表示
 setopt nolistbeep   #beepを消す
 
