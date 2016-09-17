@@ -131,6 +131,7 @@ alias gap="git add -p"
 alias gdfc="git diff --cached"
 alias pyrar="~/python/py_tools/test.py"
 alias pytool="~/python/py_tools/py_rename.py"
+alias cb="pbcopy"
 
 function chpwd() { ls -FGC } #cdした後に自動でls
 
