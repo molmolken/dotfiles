@@ -1,0 +1,3 @@
+[submodule "vimdoc-ja"]
+	path = vimdoc-ja
+	url = git@github.com:vim-jp/vimdoc-ja.git
