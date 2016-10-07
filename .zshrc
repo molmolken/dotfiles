@@ -118,6 +118,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31
 #########################################################
 #エイリアスの設定
 #########################################################
+alias vi=vim
 alias ls="ls -CGF"
 alias la="ls -A"
 alias ll="ls -al"
