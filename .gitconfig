@@ -15,4 +15,5 @@
     cm = commit -m
     and = add -n
     df = diff
+    dfc = diff --cached
 
