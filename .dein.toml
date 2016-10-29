@@ -2,4 +2,14 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'vim-jp/vim-go-extra'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+
