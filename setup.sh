@@ -33,3 +33,9 @@ else
     echo "Exist : syntax";
 fi
 
+if [ ! -e ~/.vim/after ]; then
+    ln -s ~/dotfiles/.vim/after ~/.vim;
+else
+    echo "Exist : .vim/after/";
+fi
+
