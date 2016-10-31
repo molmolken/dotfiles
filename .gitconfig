@@ -2,6 +2,7 @@
     autocrlf = input
     excludesfile = ~/.gitignore.global
     pager = less -r
+    editor = vim -c \"set fenc=utf-8\"
 [color]
     ui = auto
     diff = auto
