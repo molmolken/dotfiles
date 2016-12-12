@@ -3,9 +3,13 @@
 ########################################################
 #PATHの設定
 ########################################################
+# 基本的なやつ
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
+# Go関係
 export PATH=/usr/local/go/bin:$PATH
-#/usr/local/bin を優先して読むために先頭に追加
+# Android
+export PATH=$HOME/Library/Android/sdk/platform-tools/:$PATH
+# /usr/local/bin を優先して読むために先頭に追加
 export PATH=/usr/local/bin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache #pipのダウンロードキャッシュ
