@@ -6,6 +6,8 @@
 # 基本的なやつ
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
 # Go関係
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 # Android
 export PATH=$HOME/Library/Android/sdk/platform-tools/:$PATH
@@ -13,7 +15,7 @@ export PATH=$HOME/Library/Android/sdk/platform-tools/:$PATH
 export PATH=/usr/local/bin:$PATH
 export MANPATH=/opt/local/man:$MANPATH
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache #pipのダウンロードキャッシュ
-export GOPATH=$HOME/go
+
 
 #見つからないのでコメントアウト
 #source /usr/local/bin/virtualenvwrapper.sh
