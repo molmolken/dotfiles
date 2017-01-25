@@ -13,3 +13,6 @@ repo = 'vim-jp/vim-go-extra'
 [[plugins]]
 repo = 'fatih/vim-go'
 
+[[plugins]]
+repo = 'Shougo/unite.vim'
+

@@ -13,6 +13,7 @@ export PATH=/usr/local/go/bin:$PATH
 export PATH=$HOME/Library/Android/sdk/platform-tools/:$PATH
 # /usr/local/bin を優先して読むために先頭に追加
 export PATH=/usr/local/bin:$PATH
+# その他
 export MANPATH=/opt/local/man:$MANPATH
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache #pipのダウンロードキャッシュ
 
