@@ -15,7 +15,10 @@ set wrap        " 右端で折り返す
 set backspace=2 " eol,indent,startをBSで消せる
 set whichwrap=b,s   " 行頭行末の左右移動で行を移動
 set scrolloff=8 " 上下8行を表示
-
+" Insert Modeから抜ける際にIMEを切り替える
+set imdisable
+" ファイルタイプによるプラグインとインデントを有効
+filetype plugin indent on
 """"""""""""""""""""
 " インデント
 """"""""""""""""""""
@@ -98,13 +101,34 @@ if has('vim_starting') &&  file_name == ''
 endif
 "End dein Scripts
 
+""""""""""""""""""""
+" vim-go
+""""""""""""""""""""
+" ハイライトの設定
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+"" GoFmt時にインポートするパッケージを整理(GoFmtはファイル書き込み時に自動的に実行される)
+let g:go_fmt_command = "goimports"
+" <mapleader>のデフォルト値はバックスラッシュ
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>i <Plug>(go-imports)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
 
+""""""""""""""""""""
+" others
+""""""""""""""""""""
 syntax on
-
-
 set display=uhex    " 印字不可能文字を16進数で表示
 
-
+""""""""""""""""""""
+" neocomplete
+""""""""""""""""""""
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -115,6 +139,10 @@ let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+" ポップアップメニューで表示される候補の数
+let g:neocomplete#max_list = 20
+" 補完を表示する最小文字数
+" let g:neocomplete#auto_completion_start_length = 2:
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
@@ -172,6 +200,7 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+"let g:neocomplete#sources#omni#input_patterns.go = '\h\w\.\w*'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
