@@ -16,3 +16,5 @@ repo = 'fatih/vim-go'
 [[plugins]]
 repo = 'Shougo/unite.vim'
 
+[[plugins]]
+repo = 'simeji/winresizer'
