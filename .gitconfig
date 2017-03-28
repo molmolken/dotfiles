@@ -18,3 +18,6 @@
     df = diff
     dfc = diff --cached
 
+[user]
+# user.nameやemailが設定されていない時にデフォルトの環境変数を用いない
+    useConfigOnly = true
