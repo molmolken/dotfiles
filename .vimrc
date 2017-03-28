@@ -58,10 +58,20 @@ au InsertEnter * hi StatusLine guifg=DarkBlue guibg=DarkYellow gui=none ctermfg=
 au InsertLeave * hi StatusLine guifg=DarkBlue guibg=DarkGray gui=none ctermfg=Black ctermbg=White cterm=none
 
 """"""""""""""""""""
+" ファイルタイプ設定
+""""""""""""""""""""
+augroup FileTypeIndent
+    autocmd!
+    autocmd BufRead,BufNewFile *.md setlocal tabstop=2 softtabstop=2
+augroup END
+
+""""""""""""""""""""
 " その他
 """"""""""""""""""""
 helptags $HOME/.vim/doc " 日本語ヘルプを表示
 set helpheight=100      " ヘルプを全体表示
+" 起動時にNERDTreeを起動
+autocmd VimEnter * NERDTree ./
 
 """"""""""""""""""""
 " dein.vim
