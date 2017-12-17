@@ -15,6 +15,7 @@ set showmatch   " 閉じカッコ入力時に開きカッコを強調表示
 set list        " 不可視文字表示
 " 不可視文字の表示形式,trailは行末のスペース
 set listchars=tab:>.,trail:_,extends:>,precedes:$
+set display=uhex    " 印字不可能文字を16進数で表示
 set wrap        " 右端で折り返す
 set backspace=2 " eol,indent,startをBSで消せる
 set whichwrap=b,s   " 行頭行末の左右移動で行を移動
@@ -67,6 +68,8 @@ au InsertLeave * hi StatusLine guifg=DarkBlue guibg=DarkGray gui=none ctermfg=Bl
 augroup FileTypeIndent
     autocmd!
     autocmd BufRead,BufNewFile *.md setlocal tabstop=2 softtabstop=2
+    autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.go hi SpecialKey cterm=none ctermfg=235
 augroup END
 
 """"""""""""""""""""
@@ -138,7 +141,6 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 " others
 """"""""""""""""""""
 syntax on
-set display=uhex    " 印字不可能文字を16進数で表示
 
 """"""""""""""""""""
 " neocomplete
