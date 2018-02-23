@@ -21,3 +21,6 @@ repo = 'simeji/winresizer'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'aklt/plantuml-syntax'

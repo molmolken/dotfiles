@@ -23,6 +23,7 @@ set scrolloff=8 " 上下8行を表示
 set imdisable
 " ファイルタイプによるプラグインとインデントを有効
 filetype plugin indent on
+set clipboard=unnamed,autoselect
 """"""""""""""""""""
 " インデント
 """"""""""""""""""""
@@ -219,4 +220,7 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+" 現在開いているファイルをChromeで開く
+au FileType * command! OpenChrome :!open -a /Applications/Google\ Chrome.app %
 
