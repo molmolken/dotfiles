@@ -21,6 +21,10 @@ deploy_files .gitconfig
 deploy_files .gitignore.global
 
 # vimdoc-ja
+if [ ! -e ~/.vim ]; then
+    mkdir ~/.vim/;
+fi
+
 if [ ! -e ~/.vim/doc ]; then
     ln -s ~/dotfiles/vimdoc-ja/doc/ ~/.vim/doc;
 else
