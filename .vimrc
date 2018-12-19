@@ -79,7 +79,7 @@ augroup END
 helptags $HOME/.vim/doc " 日本語ヘルプを表示
 set helpheight=100      " ヘルプを全体表示
 " 起動時にNERDTreeを起動
-autocmd VimEnter * NERDTree ./
+" autocmd VimEnter * NERDTree ./
 
 """"""""""""""""""""
 " dein.vim
