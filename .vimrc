@@ -68,9 +68,10 @@ au InsertLeave * hi StatusLine guifg=DarkBlue guibg=DarkGray gui=none ctermfg=Bl
 """"""""""""""""""""
 augroup FileTypeIndent
     autocmd!
-    autocmd BufRead,BufNewFile *.md setlocal tabstop=2 softtabstop=2
+    autocmd BufNewFile,BufRead *.md setlocal tabstop=2 softtabstop=2
     autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.go hi SpecialKey cterm=none ctermfg=235
+    autocmd BufNewFile,BufRead *.gs setlocal tabstop=2 shiftwidth=2
 augroup END
 
 """"""""""""""""""""
