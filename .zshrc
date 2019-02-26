@@ -148,11 +148,14 @@ alias cb="pbcopy"
 
 function chpwd() { ls -FGC } #cdした後に自動でls
 
-########################################################
-#~~~~~~~~~~~~~~~~~~~~~~~~備考~~~~~~~~~~~~~~~~~~~~~~~~~~
-#
-#
-#
-#
-###########
+# git管理下にいる際に左プロンプトにブランチ名とステータスを表示
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+PROMPT=$PROMPT'${vcs_info_msg_0_}'
 
