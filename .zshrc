@@ -145,6 +145,7 @@ alias gdfc="git diff --cached"
 alias pyrar="~/python/py_tools/test.py"
 alias pytool="~/python/py_tools/py_rename.py"
 alias cb="pbcopy"
+alias chkey="open /System/Library/CoreServices/KeyboardSetupAssistant.app"
 
 function chpwd() { ls -FGC } #cdした後に自動でls
 
