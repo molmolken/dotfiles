@@ -25,6 +25,7 @@ set imdisable
 " ファイルタイプによるプラグインとインデントを有効
 filetype plugin indent on
 set clipboard=unnamed,autoselect
+set belloff=all "ビープ音を消す
 """"""""""""""""""""
 " インデント
 """"""""""""""""""""
@@ -77,7 +78,7 @@ augroup END
 """"""""""""""""""""
 " その他
 """"""""""""""""""""
-helptags $HOME/.vim/doc " 日本語ヘルプを表示
+" helptags $HOME/.vim/doc " 日本語ヘルプを表示
 set helpheight=100      " ヘルプを全体表示
 " 起動時にNERDTreeを起動
 " autocmd VimEnter * NERDTree ./

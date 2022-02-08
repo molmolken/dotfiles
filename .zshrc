@@ -109,6 +109,7 @@ setopt nolistbeep   #ビープを消す
 bindkey -e          #emacs風keyバインド
 setopt list_packed  #補完候補を詰めて表示
 setopt nolistbeep   #beepを消す
+setopt no_beep
 
 
 ##########################################################
