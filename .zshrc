@@ -14,6 +14,8 @@ export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
+# Cursor
+export PATH=/Applications/Cursor.app/Contents/MacOS:$PATH
 # Android
 export PATH=$HOME/Library/Android/sdk/platform-tools/:$PATH
 # /usr/local/bin を優先して読むために先頭に追加
@@ -21,6 +23,8 @@ export PATH=/usr/local/bin:$PATH
 # その他
 export MANPATH=/opt/local/man:$MANPATH
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache #pipのダウンロードキャッシュ
+
+eval $(/opt/homebrew/bin/brew shellenv)
 
 
 #見つからないのでコメントアウト
@@ -147,6 +151,7 @@ alias pyrar="~/python/py_tools/test.py"
 alias pytool="~/python/py_tools/py_rename.py"
 alias cb="pbcopy"
 alias chkey="open /System/Library/CoreServices/KeyboardSetupAssistant.app"
+alias cursor='open -a Cursor'
 
 function chpwd() { ls -FGC } #cdした後に自動でls
 
@@ -161,3 +166,4 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 PROMPT=$PROMPT'${vcs_info_msg_0_}'
 
+eval $(/opt/homebrew/bin/brew shellenv)
