@@ -21,3 +21,5 @@
 [user]
 # user.nameやemailが設定されていない時にデフォルトの環境変数を用いない
     useConfigOnly = true
+	name = molmolken
+	email = 1961122+molmolken@users.noreply.github.com
